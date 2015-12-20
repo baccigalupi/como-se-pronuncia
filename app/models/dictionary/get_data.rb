@@ -12,7 +12,7 @@ module Dictionary
     end
 
     def local_path
-      @local_path ||= Rails.root.to_s + "/app/models/dictionary/data.txt"
+      @local_path ||= self.class.data_path
     end
 
     def request
@@ -26,6 +26,10 @@ module Dictionary
     def perform
       raise "Could not get dictionary file" unless response.code == 200
       File.open(local_path, "w") {|f| f.write(response.to_str.force_encoding('ISO-8859-1').encode('UTF-8')) }
+    end
+
+    def self.data_path
+      Rails.root.to_s + "/app/models/dictionary/data.txt"
     end
   end
 end
