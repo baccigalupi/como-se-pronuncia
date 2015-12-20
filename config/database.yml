@@ -78,8 +78,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: english_is_hard_production
-  username: english_is_hard
-  password: <%= ENV['ENGLISH_IS_HARD_DATABASE_PASSWORD'] %>
+#production:
+  #<<: *default
+  #database: english_is_hard_production
+  #username: english_is_hard
+  #password: <%= ENV['ENGLISH_IS_HARD_DATABASE_PASSWORD'] %>

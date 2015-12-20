@@ -12,6 +12,8 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'active_model_serializers'
 
+gem 'rest-client'
+
 group :production, :staging do
   gem 'rails_12factor'
 end
