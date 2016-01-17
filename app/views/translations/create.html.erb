@@ -1,0 +1,24 @@
+<div class='page-element content'>
+  <div class='inner'>
+    <div class='row'><a href="/">back</a></div>
+
+    <h4>Ingles</h4>
+    <p class='row'>
+      <%= @translation.english %>
+    </p>
+
+    <hr>
+
+    <h4>Pronuciar</h4>
+
+    <p class='row'>
+      <% @translation.codes.each do |word_codes| %>
+        <% word_codes.each do |sound_code| %>
+          <div class='unit'><%= sound_code.sound %></div>
+        <% end %><div class='unit spacer'></div>
+      <% end %>
+    </p>
+
+    <div class='row'><a href="/">back</a></div>
+  </div>
+</div>
