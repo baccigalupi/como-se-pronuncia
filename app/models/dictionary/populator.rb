@@ -46,11 +46,11 @@ module Dictionary
       end
 
       def english
-        attributes && attribute_matches[1].downcase
+        attribute_matches && attribute_matches[1].downcase
       end
 
       def phonetic
-        attributes && attribute_matches[2].downcase
+        attribute_matches && attribute_matches[2].downcase
       end
     end
   end
